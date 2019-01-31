@@ -37,16 +37,84 @@ nav#gameLinks a::after {
     left: 0%;
     width: 0%;
     height: 8px;
-    background: linear-gradient(to right rgb(237, 243, 71), rgb(188, 74, 0)),
-        -moz-linear-gradient (to right rgb(237, 243, 71), rgb(188, 74, 0)),
-        -webkit-linear-gradient(to right rgb(237, 243, 71), rgb(188, 74, 0));
+    background: linear-gradient(to right, rgb(237, 243, 71), rgb(188, 74, 0));
     border-radius: 4px;
     opacity: 0;
+    transition: opacity 0.5s, width 0.5s;
+}
+
+nav#gameLinks a:hover::after {
+    opacity: 1;
+    width: 100%;
 }
 
 /* Sprite Styles */
+div {
+    position: absolute;
+}
 
+div#bat {
+    width: 40px;
+    height: 50px;
+    top: 100px;
+    left: -50px;
+    background: url(paa_bat.png) left center no-repeat;
+    background-size: cover;
+}
 
+div#butterfly {
+    width: 35px;
+    top: 60px;
+    left: -50px;
+    background: url(paa_bfly.png) left center no-repeat;
+    background-size: cover;
+}
+
+div#fox {
+    width: 280px;
+    height: 260px;
+    bottom: 10px;
+    right: 10px;
+    background: url(paa_fox.png) left center no-repeat;
+    background-size: cover;
+    animation: playsprite 3.5s 4s steps(27) infinite;
+}
 
 
 /* Animation Styles */
+@keyframes playsprite {
+    100% {
+        background-position: right center;
+    }
+}
+
+@keyframes flyright {
+    25% {
+        top: 150px;
+    }
+
+    50% {
+        top: 55px;
+    }
+
+    65% {
+        top: 120px;
+    }
+
+    90% {
+        top: 50px;
+    }
+
+    100% {
+        top: 80px;
+        left: 100%;
+    }
+}
+
+div#fox {
+    animation: playsprite 3.5s 4s steps(27) infinite;
+}
+
+div#bat {
+    animation: flysprite 8s linear infinite;
+}
