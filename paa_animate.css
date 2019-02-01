@@ -64,6 +64,7 @@ div#bat {
 
 div#butterfly {
     width: 35px;
+    height: 35px;
     top: 60px;
     left: -50px;
     background: url(paa_bfly.png) left center no-repeat;
@@ -116,5 +117,11 @@ div#fox {
 }
 
 div#bat {
-    animation: flysprite 8s linear infinite;
+    animation: playsprite 2s steps(39) infinite;
+    animation: flyright 8s linear infinite;
+}
+
+div#butterfly {
+    animation: playsprite 1s 3s steps(33) infinite;
+    animation: flyright 6s cubic-bezier(0, 1, 0.73, 0) infinite;
 }
