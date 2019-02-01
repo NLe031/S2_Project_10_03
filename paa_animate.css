@@ -20,6 +20,7 @@
 
 
 /* Transition Effects */
+/* The Styles here add a color transition to the nav links at the top of the screen. */
 nav#gameLinks a {
     position: relative;
     color: white;
@@ -49,6 +50,7 @@ nav#gameLinks a:hover::after {
 }
 
 /* Sprite Styles */
+/* These styles add the sprite imgs to the website. */
 div {
     position: absolute;
 }
@@ -83,6 +85,7 @@ div#fox {
 
 
 /* Animation Styles */
+/* The animations here allow the sprites to move in the website. */
 @keyframes playsprite {
     100% {
         background-position: right center;
